@@ -144,11 +144,88 @@ if ('A' < 'b') {
 }
 
 //loops
+
+
+//forloop 
+//I need this to run a specific number of times
+//but i can leave whenever i'm ready too.
+
+//foreach
+//i need to process each piece of data
+//&& i can never leave
+
+//while
+//i am waiting on a specific behavior || condition
+
+
+
 //functions
   function sum(num1, num2) {
     return num1 + num2
 }
 
+//for return to work. You need to set it as a varible other wise will be returned to a void and not show up.
+ 
+console.log(sum(10,10))
+
+//function expression underme. He does not work if you call it
+//hello() here. it needs to be under the functional expression.
+var hello = function hello() {
+    console.log('hello')
+}
+
+var foo = hello;
+var bar = foo;
+console.log(bar);
+hello();
+foo();
+bar();
+
+var text = "";
+for (let i = 0; i <5; i++) {
+    if (i == 3) {
+        continue; // continue is like break but continues with the increment. 
+        // so it goes 0124 but skips 3.
+        //break
+        //it goes 012 and stops.
+    }
+    //follows
+    text = text + i;
+    
+}
+
+// let scope in while loop
+ {
+     let i = 0;
+     while (i < 10) {//is true undefined <10
+        // do stuff
+        console.log('while:' ,i);
+        i++;
+
+     }
+ }
+
+//Show using the arguemnts object
+function doStuff() {
+    console.log(arguments[1], arguments.length);
+    //arguments is array LIKE meaining it does not get prototypal inheritance of the ARRAY
+}
+
+doStuff(1,2,3,4);
+
+function argsSum() {
+    for (let i = 0; i < arguments.length; i++) {
+        result += arguments[i]
+        
+    }
+    return result;
+}
+
+console.log(argsSum(1,2,3,4));;
+
+//
+
 //New material
 //D.O.M.
+
 //events
