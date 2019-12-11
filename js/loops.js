@@ -208,9 +208,11 @@ function newLines(text) {
     dom.innerText += text
 }
 
-countVowels = '';
-countConsants = '';
-let letterArray = []
+
+let letterArray = {
+    vowels: 0,
+    consants: 0
+}
 function wordCounter() {
     inputWord.addEventListener('blur',event => {
         enterWord = inputWord.value
@@ -220,14 +222,21 @@ function wordCounter() {
             if (letter == 'a'||letter == 'e'||letter == 'i'||letter == 'o'||letter == 'u') {
                 // stores how many vowels are in here 
                 //count up the vowels everytime one of these letters show
-                countVowels += 1
+                letterArray.vowels += 1;
+                if (letterArray[letter] = 1) {
+                    letterArray[letter]++
+                }
             } else {
                //stores how many consonants are in here
-               countConsants += 1
+               letterArray.consants += 1
+               if (letterArray[letter] = 1) {
+                letterArray[letter]++
+            }
             }
             
         }
-        
+        console.log(letterArray)
+        newLines(enterWord)
     });
 }
 wordCounter();
